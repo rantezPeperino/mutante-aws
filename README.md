@@ -7,6 +7,8 @@ aws ecr get-login-password --region us-east-1 | docker login --username AWS --pa
 Crean las imagenes y subirlas al servicio de ECR.
 
 springboot: 
+
+
 -Crear el repo 
 ```bash
 aws ecr create-repository --repository-name mutante-springboot --region us-east-1
@@ -27,8 +29,10 @@ docker tag mutante-springboot:latest xxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/m
 ```bash
 docker push xxxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/mutante-springboot:latest
 ```
+-------------------------------------------------------
+mysql: 
 
-mysql: -Crear el repo 
+-Crear el repo 
 ```bash
 aws ecr create-repository --repository-name mutante-mysql-aws --region us-east-1
 ```
@@ -48,7 +52,7 @@ docker tag mutante-mysql-aws:latest xxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/mu
 docker push xxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/mutante-mysql-aws:latest
 ```
 
-
+-------------------------------------------------------
 Se deben crear los servicios para la comunicacion entre el proyecto springboot y mysql. Habilitar la url publica para poder tener acceso a los endpoint del proyecto springboot. Se encuentra el archivo en la carpeta .aws initMutante.tf
 
 Crear una VPC 
@@ -61,9 +65,21 @@ Crear Internet Gateway y asociarlo a la VPC
 
 
 Crear NAT Gateway para la subnet privada 
+
+
 Crear y configurar tablas de ruteo 
+
+
 Crear Security Groups 
+
+
 Crear un cluster ECS 
+
+
 Crear Task Definitions para ambos contenedores 
+
+
 Crear Application Load Balancer (ALB) 
+
+
 Crear servicios ECS
