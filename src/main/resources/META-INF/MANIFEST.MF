@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: mutante
+Implementation-Version: 1.0-SNAPSHOT
+Start-Class: com.tuempresa.TuApplication
+Spring-Boot-Version: 2.7.5
+Main-Class: org.springframework.boot.loader.WarLauncher
+Spring-Boot-Classes: WEB-INF/classes/
+Spring-Boot-Lib: WEB-INF/lib/
+Created-By: Maven WAR Plugin 3.3.2
